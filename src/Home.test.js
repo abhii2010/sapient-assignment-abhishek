@@ -1,11 +1,9 @@
 import React from 'react';
 import { shallow } from 'enzyme';
- 
-import App from './App';
+import Home from './Home';
 
-let wrapped = shallow(<App />);
- 
-describe('App', () => {
+let wrapped = shallow(<Home />);
+describe('Home', () => {
   test('snapshot renders', () => {
     expect(wrapped).toMatchSnapshot();
   });
