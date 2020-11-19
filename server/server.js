@@ -59,7 +59,11 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(7000);
+const port = process.env.PORT || 3000;
+
+app.listen(port, function listenHandler() {
+    console.info(`Running on ${port}`)
+});
 
 function htmlTemplate(data, dom, helmet, initialState) {
   return data
