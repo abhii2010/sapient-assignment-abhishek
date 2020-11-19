@@ -16,7 +16,6 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
     "es6-promise": "^4.2.5",
-    "heroku": "^7.47.3",
     "ignore-styles": "^5.0.1",
     "isomorphic-fetch": "^2.2.1",
     "nodemon": "2.0.4",
