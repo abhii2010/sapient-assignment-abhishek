@@ -52,7 +52,6 @@ class Home extends React.Component {
     fetch(`https://api.spacexdata.com/v3/launches?limit=100&${filterString}`)
       .then(response => response.json())
       .then(data => {
-        console.log('data', data);
         this.setState({ records: data });
       })
   }
@@ -63,7 +62,7 @@ class Home extends React.Component {
       const filterUrl = window.location.href.split('?')[1];
     
       if(filterUrl) {
-        apiUrl+=`?${filterUrl}`;
+        apiUrl+=`&${filterUrl}`;
       }
     }
 
@@ -106,8 +105,6 @@ class Home extends React.Component {
 
   render() {
     const { records, loading } = this.state;
-
-    console.log('records', records);
 
     if (loading) {
       return <div>Loading...</div>;
