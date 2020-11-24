@@ -107,6 +107,8 @@ class Home extends React.Component {
   render() {
     const { records, loading } = this.state;
 
+    console.log('records', records);
+
     if (loading) {
       return <div>Loading...</div>;
     }
@@ -117,7 +119,7 @@ class Home extends React.Component {
         <h1>SpaceX Launch Programs</h1>
         <div className="main">
           <Filter filterData={this.filterData} filterString={this.state.filter_string}/>
-          <List records={records} />
+          { records.length > 0 && (<List records={records} />) }
         </div>
       </div>
     );

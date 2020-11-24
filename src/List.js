@@ -19,7 +19,7 @@ const List = (props) => {
             }
           </ul>
           <span className="detail-title">Launch year: <label className="sub-section">{record.launch_year}</label></span>
-          <span className="detail-title">Successful launch: <label className="sub-section">{record.launch_success.toString()}</label></span>
+          <span className="detail-title">Successful launch: <label className="sub-section">{record.launch_success && record.launch_success.toString()}</label></span>
           <span className="detail-title">Successful landing: <label className="sub-section">{record.landing_success}</label></span>
         </div>
       </div>
